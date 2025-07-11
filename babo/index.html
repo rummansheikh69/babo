@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-300 dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <title>$BABO</title>
+    <meta property="og:title" content="Join the BABO Family - $BABO" />
+    <meta
+      property="og:description"
+      content="Meet $BABO, the cosmic frog born from a dead star explosion! Join our community of space explorers and be part of something extraordinary!"
+    />
+    <meta property="og:image" content="main.png" />
+    <meta property="og:image:secure_url" content="main.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="BABO - The Cosmic Frog" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BABO Coin" />
+    <meta property="og:locale" content="en_US" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // Theme toggle logic
+      document.addEventListener("DOMContentLoaded", function () {
+        const html = document.documentElement;
+        const themeBtn = document.getElementById("theme-toggle");
+        // Initial theme
+        const saved = localStorage.getItem("theme");
+        if (saved === "light") {
+          html.classList.remove("dark");
+        } else {
+          html.classList.add("dark");
+        }
+        // Toggle
+        themeBtn &&
+          themeBtn.addEventListener("click", function () {
+            if (html.classList.contains("dark")) {
+              html.classList.remove("dark");
+              localStorage.setItem("theme", "light");
+            } else {
+              html.classList.add("dark");
+              localStorage.setItem("theme", "dark");
+            }
+          });
+      });
+    </script>
+  </head>
+
+  <body
+    class="min-h-screen bg-gray-950 text-white transition-colors duration-300"
+    style="margin: 0; padding: 0; background-color: var(--bg-primary)"
+  >
+    <!-- Main Layout Container -->
+    <div class="two-column-layout">
+      <!-- Fixed Left Column -->
+      <div class="fixed-column">
+        <!-- Navbar with Social Links (stick to top, no margin) -->
+        <nav class="navbar-section" style="margin-top: 0; padding-top: 0">
+          <div class="flex gap-6 justify-center">
+            <a
+              href="https://x.com/babo_solana"
+              target="_blank"
+              rel="noopener"
+              class="nav-link"
+              >X</a
+            >
+            <a
+              href="https://x.com/i/communities/1943714226796900551"
+              target="_blank"
+              rel="noopener"
+              class="nav-link"
+              >Community</a
+            >
+            <a
+              href="https://dexscreener.com/solana/"
+              target="_blank"
+              rel="noopener"
+              class="nav-link"
+              >DEX</a
+            >
+          </div>
+        </nav>
+        <!-- Large Title Text -->
+        <div class="title-section" style="margin-bottom: 2.5rem">
+          <h1
+            class="main-title"
+            style="
+              font-size: clamp(3rem, 8vw, 7rem);
+              line-height: 1.05;
+              letter-spacing: -0.03em;
+              text-align: center;
+              margin: 0;
+              color: #fff;
+            "
+          >
+            BABO
+          </h1>
+        </div>
+        <!-- Centered Logo -->
+        <div
+          class="logo-section"
+          style="display: flex; justify-content: center; margin-bottom: 2rem"
+        >
+          <img src="logo.png" alt="BABO logo" class="centered-logo" />
+        </div>
+        <!-- Thin Contract Address Card -->
+        <div
+          class="contract-section"
+          style="margin-bottom: 2rem; text-align: center"
+        >
+          <span
+            class="contract-label"
+            style="
+              display: block;
+              font-size: 0.9rem;
+              font-weight: 700;
+              color: #fff;
+              text-transform: uppercase;
+              letter-spacing: 0.08em;
+              margin-bottom: 0.5rem;
+            "
+            >contract address</span
+          >
+          <div
+            class="contract-content"
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 0.5rem;
+              flex-wrap: wrap;
+            "
+          >
+            <span
+              id="contract-address"
+              style="
+                font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono',
+                  'Source Code Pro', monospace;
+                font-size: 1rem;
+                color: #fff;
+                font-weight: 500;
+                text-align: center;
+                word-break: break-all;
+                line-height: 1.3;
+                max-width: 100%;
+              "
+              >Coming Soon</span
+            >
+            <button
+              onclick="copyContractAddress()"
+              class="copy-btn"
+              title="Copy contract address"
+              style="
+                color: #fff;
+                padding: 0.2rem;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="transparent"
+                stroke="#333"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Back rectangle -->
+                <path
+                  d="M8 7H6C4.9 7 4 7.9 4 9V17C4 18.1 4.9 19 6 19H14C15.1 19 16 18.1 16 17V15"
+                />
+
+                <!-- Front rectangle -->
+                <path
+                  d="M10 5H18C19.1 5 20 5.9 20 7V15C20 16.1 19.1 17 18 17H10C8.9 17 8 16.1 8 15V7C8 5.9 8.9 5 10 5Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Buy Button -->
+        <div class="buy-section">
+          <a
+            id="buy-link"
+            href=""
+            target="_blank"
+            rel="noopener"
+            class="btn-buy"
+            >BUY $BABO</a
+          >
+        </div>
+      </div>
+
+      <!-- Scrollable Right Column -->
+      <div class="scrollable-column">
+        <!-- Images will be loaded dynamically by JavaScript -->
+
+        <footer
+          class="w-full py-6 backdrop-blur text-center text-gray-400 text-sm mt-10 shadow-inner"
+        >
+          &copy; 2025 BABO. All rights reserved.
+        </footer>
+      </div>
+    </div>
+
+    <!-- Hidden elements for script compatibility -->
+    <img
+      id="header-image"
+      class="hidden"
+      alt="Header Image"
+      style="display: none"
+    />
+    <span id="header-placeholder" class="hidden" style="display: none"></span>
+    <img
+      id="token-logo"
+      class="hidden"
+      alt="Token Logo"
+      style="display: none"
+    />
+    <span id="logo-placeholder" class="hidden" style="display: none"></span>
+
+    <script src="script.js"></script>
+    <script src="../unpkg.com/lenis%401.3.4/dist/lenis.min.js"></script>
+    <script src="../unpkg.com/vanilla-tilt%401.8.1/dist/vanilla-tilt.min.js"></script>
+    <!-- Twitter Widget SDK -->
+    <script
+      async=""
+      src="../platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+    <script>
+      // Inisialisasi Lenis untuk smooth scroll
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easeOutExpo
+        smooth: true,
+        smoothTouch: false,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+
+      // Smooth scroll untuk anchor link
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href").slice(1);
+          const target = document.getElementById(targetId);
+          if (target) {
+            e.preventDefault();
+            lenis.scrollTo(target, { offset: 0 });
+          }
+        });
+      });
+
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 18,
+        speed: 600,
+        glare: true,
+        "max-glare": 0.18,
+        scale: 1.04,
+        perspective: 1200,
+      });
+
+      // Inisialisasi Twitter Feed Loader
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("🚀 Initializing Twitter Feed Loader...");
+
+        // Tunggu sebentar untuk memastikan semua script ter-load
+        setTimeout(() => {
+          // Cek apakah Twitter Widget SDK tersedia
+          if (window.twttr) {
+            console.log("✅ Twitter Widget SDK found, initializing...");
+            window.twttr.ready(function () {
+              console.log("✅ Twitter Widget SDK ready, enabling RSS feed...");
+              // Aktifkan RSS Feed Mode untuk akun @elonmusk
+              enableRSSFeedMode("elonmusk");
+            });
+          } else {
+            console.log("⚠️ Twitter Widget SDK not found, using fallback...");
+            // Fallback jika Twitter SDK tidak tersedia
+            enableRSSFeedMode("elonmusk");
+          }
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
