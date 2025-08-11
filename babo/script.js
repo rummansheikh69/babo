@@ -6,7 +6,7 @@
 // ==========================================================
 const COIN_CONFIG = {
   // 🔧 UBAH INI: Contract Address (CA) Toke
-  contractAddress: "DLCeW35wH8EDavdgusUdVcDf7EhknLc2szQ6HemDbonk",
+  contractAddress: "3W5qCB5C21HK9CDysogPehYJYnYJTdHJMchJzaKUpump",
 
   // 🔧 UBAH INI: Chain ID (opsional, default: solana)
   chainId: "solana",
